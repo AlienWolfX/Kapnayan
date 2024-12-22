@@ -1,0 +1,122 @@
+/* Global Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #007bff; /* Primary color for the navbar */
+}
+
+.navbar-brand img {
+    max-width: 50px;
+}
+
+.navbar-text {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* Button Styling */
+/* Merged existing and new .btn styles */
+.btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px; /* Fixed height for square buttons */
+    width: 250px; /* Fixed width for square buttons */
+    text-align: center;
+    background-color: #F4F4F4; /* Custom button color */
+    border: none; /* Remove border for custom color */
+    color: black; /* Text color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s ease-in-out; /* Smooth scaling on hover */
+    margin: 10px; /* Adds margin between buttons */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Scale button on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.btn img {
+    max-width: 50px; /* Adjust image size */
+    margin-bottom: 10px;
+}
+
+/* Ensure row is centered */
+.row {
+    justify-content: center;
+    gap: 20px; /* Adds space between each button in the row */
+}
+
+/* Margin between rows */
+.g-3 {
+    margin-top: 20px; /* Add spacing between rows */
+}
+
+/* Announcement Section */
+h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #343a40;
+}
+
+/* Announcement Cards */
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+/* Video and Carousel styling */
+.card-img-top {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    filter: invert(100%); /* Make the carousel controls visible on dark background */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .btn {
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .row .col-md-3 {
+        margin-bottom: 20px;
+    }
+
+    .navbar-text {
+        display: none;
+    }
+}
