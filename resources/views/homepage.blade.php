@@ -27,13 +27,13 @@
             <!-- Top Row: Profile, Calendar, About Us -->
             @auth
                 <div class="col-md-3 d-flex justify-content-center">
-                    <a href="{{ route('profile') }}" class="btn">
+                    <a href="{{ url('/profile') }}" class="btn">
                         <img src="{{ asset('images/profile.png') }}" alt="Profile">
                         <h5>Profile</h5>
                     </a>
                 </div>
                 <div class="col-md-3 d-flex justify-content-center">
-                    <a href="{{ route('calendar') }}" class="btn">
+                    <a href="" class="btn">
                         <img src="{{ asset('images/event.png') }}" alt="Calendar">
                         <h5>Calendar</h5>
                     </a>
@@ -72,19 +72,19 @@
             <!-- Bottom Row: Document, Forum, Contact Us -->
             @auth
                 <div class="col-md-3 d-flex justify-content-center">
-                    <a href="{{ route('document') }}" class="btn btn-danger">
+                    <a href="" class="btn btn-danger">
                         <img src="{{ asset('images/document.png') }}" alt="Document">
                         <h5>Document</h5>
                     </a>
                 </div>
                 <div class="col-md-3 d-flex justify-content-center">
-                    <a href="{{ route('forum') }}" class="btn btn-danger">
+                    <a href="" class="btn btn-danger">
                         <img src="{{ asset('images/forum.png') }}" alt="Forum">
                         <h5>Forum</h5>
                     </a>
                 </div>
                 <div class="col-md-3 d-flex justify-content-center">
-                    <a href="{{ route('contactus') }}" class="btn">
+                    <a href="" class="btn">
                         <img src="{{ asset('images/contactus.png') }}" alt="Contact Us">
                         <h5>Contact Us</h5>
                     </a>
@@ -176,10 +176,6 @@
           </div>
           <div class="modal-body">
             <p>You need to <a href="{{ route('login') }}">log in</a> to access this feature.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <a href="{{ route('login') }}" class="btn btn-primary">Log In</a>
           </div>
         </div>
       </div>
