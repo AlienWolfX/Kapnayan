@@ -31,12 +31,22 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'id_number' => [
+                'required',
+                'regex:/^\d{3}-\d{5}$/',
+                'unique:users,id_number'
+            ],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        ], [
+            'id_number.required' => 'The ID number field is required.',
+            'id_number.regex' => 'The ID number format is invalid. It should be xxx-xxxxx.',
+            'id_number.unique' => 'This ID number is already registered.',
         ]);
 
         $user = User::create([
             'name' => $request->name,
+            'id_number' => $request->id_number,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
@@ -45,6 +55,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect('/homepage');
+        return redirect('/submitted');
     }
 }

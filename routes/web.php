@@ -11,6 +11,10 @@ Route::get('/homepage', function () {
     return view('homepage');
 });
 
+Route::get('/submitted' , function(){
+    return view('submitted');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

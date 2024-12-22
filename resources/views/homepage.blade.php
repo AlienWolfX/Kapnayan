@@ -44,7 +44,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ url ('/homepage') }}">
+            <a class="navbar-brand" href="{{ url ('/') }}">
                 <img src="{{ asset('images/Kapnayan-logo.png') }}" alt="CSU Logo" class="img-fluid" style="max-width: 50px;">
                 KAPNAYAN
             </a>
