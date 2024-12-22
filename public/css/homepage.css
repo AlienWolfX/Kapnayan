@@ -1,10 +1,6 @@
 /* Global Styling */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: url('../images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
 }
 
 /* Navbar Styling */
@@ -21,8 +17,27 @@ body {
     color: #fff;
 }
 
+.btn-logout {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    color: #333;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.btn-logout:hover {
+    background-color: #e9ecef;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* Button Styling */
-/* Merged existing and new .btn styles */
 .btn {
     display: flex;
     flex-direction: column;
@@ -37,12 +52,10 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     transition: transform 0.2s ease-in-out; /* Smooth scaling on hover */
     margin: 10px; /* Adds margin between buttons */
-    cursor: pointer; /* Change cursor on hover */
 }
 
 .btn:hover {
     transform: scale(1.05); /* Scale button on hover */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .btn img {
@@ -65,15 +78,12 @@ body {
 h3 {
     font-size: 2rem;
     margin-bottom: 30px;
-    color: #343a40;
 }
 
 /* Announcement Cards */
 .card {
     border: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
 }
 
 .card-body {
@@ -83,40 +93,20 @@ h3 {
 .card-title {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #343a40;
 }
 
 /* Video and Carousel styling */
 .card-img-top {
     width: 100%;
     height: auto;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
 }
 
 .carousel-inner img {
     width: 100%;
     height: auto;
-    border-radius: 15px;
 }
 
 .carousel-control-prev, .carousel-control-next {
     filter: invert(100%); /* Make the carousel controls visible on dark background */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .btn {
-        width: 100%;
-        height: auto;
-        padding: 20px 0;
-    }
-
-    .row .col-md-3 {
-        margin-bottom: 20px;
-    }
-
-    .navbar-text {
-        display: none;
-    }
-}

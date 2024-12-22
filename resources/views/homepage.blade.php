@@ -8,6 +8,37 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        /* Ensure equal square buttons */
+        .btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 150px; /* Fixed height for square buttons */
+            width: 250px; /* Fixed width for square buttons */
+            text-align: center;
+            background-color: #F4F4F4; /* Custom button color */
+            border: none; /* Remove border for custom color */
+            color: black; /* Text color */
+        }
+
+        .btn img {
+            max-width: 50px;
+            margin-bottom: 10px;
+        }
+
+        /* Ensure row is centered */
+        .row {
+            justify-content: center;
+        }
+        </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -17,7 +48,12 @@
                 <img src="{{ asset('images/Kapnayan-logo.png') }}" alt="CSU Logo" class="img-fluid" style="max-width: 50px;">
                 KAPNAYAN
             </a>
-            <span class="navbar-text">Caraga State University</span>
+            @auth
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="btn-logout btn-link nav-link text-dark">Logout</button>
+            </form>
+            @endauth
         </div>
     </nav>
 
